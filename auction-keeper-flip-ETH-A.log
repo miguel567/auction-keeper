@@ -1,0 +1,551 @@
+/mnt/c/Users/migue/Documents/docker/auction-keeper/bin/auction-keeper: line 3: /mnt/c/Users/migue/Documents/docker/auction-keeper/bin/../_virtualenv/bin/activate: No such file or directory
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/main.py", line 634, in <module>
+    AuctionKeeper(sys.argv[1:]).main()
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/main.py", line 130, in __init__
+    register_keys(self.web3, self.arguments.eth_key)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/keys.py", line 32, in register_keys
+    register_key(web3, key)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/keys.py", line 43, in register_key
+    register_key_file(web3, parsed.get('key_file'), parsed.get('pass_file', None))
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/keys.py", line 51, in register_key_file
+    with open(key_file) as key_file_open:
+FileNotFoundError: [Errno 2] No such file or directory: '~/.ethereum/keystore'
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/main.py", line 634, in <module>
+    AuctionKeeper(sys.argv[1:]).main()
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/main.py", line 130, in __init__
+    register_keys(self.web3, self.arguments.eth_key)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/keys.py", line 32, in register_keys
+    register_key(web3, key)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/keys.py", line 43, in register_key
+    register_key_file(web3, parsed.get('key_file'), parsed.get('pass_file', None))
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/keys.py", line 51, in register_key_file
+    with open(key_file) as key_file_open:
+IsADirectoryError: [Errno 21] Is a directory: '/home/mcabeza/.ethereum/keystore'
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/main.py", line 634, in <module>
+    AuctionKeeper(sys.argv[1:]).main()
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/main.py", line 145, in __init__
+    self.mcd = DssDeployment.from_node(web3=self.web3)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/deployment.py", line 323, in from_node
+    return DssDeployment.from_network(web3=web3, network=network)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/deployment.py", line 333, in from_network
+    return DssDeployment.from_json(web3=web3, conf=open(addresses_path, "r").read())
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/deployment.py", line 312, in from_json
+    return DssDeployment(web3, DssDeployment.Config.from_json(web3, conf))
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/deployment.py", line 193, in from_json
+    vat = Vat(web3, Address(conf['MCD_VAT']))
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/dss.py", line 295, in __init__
+    self._contract = self._get_contract(web3, self.abi, address)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/__init__.py", line 157, in _get_contract
+    if not is_contract_at(web3, address):
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/util.py", line 62, in is_contract_at
+    code = web3.eth.getCode(address.address)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/eth.py", line 198, in getCode
+    [account, block_identifier],
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/manager.py", line 149, in request_blocking
+    response = self._make_request(method, params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/manager.py", line 128, in _make_request
+    return request_func(method, params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/signing.py", line 150, in middleware
+    return make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/formatting.py", line 75, in apply_formatters
+    response = make_request(method, params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/gas_price_strategy.py", line 34, in middleware
+    return make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/formatting.py", line 73, in apply_formatters
+    response = make_request(method, formatted_params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/attrdict.py", line 33, in middleware
+    response = make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/formatting.py", line 73, in apply_formatters
+    response = make_request(method, formatted_params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/normalize_errors.py", line 25, in middleware
+    result = make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/formatting.py", line 75, in apply_formatters
+    response = make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/formatting.py", line 73, in apply_formatters
+    response = make_request(method, formatted_params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/exception_retry_request.py", line 104, in middleware
+    return make_request(method, params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/providers/rpc.py", line 83, in make_request
+    **self.get_request_kwargs()
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/_utils/request.py", line 35, in make_post_request
+    response.raise_for_status()
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://blue-silent-rain.kovan.quiknode.pro/a973856d319870d46bb3b1923c145a8d21973d66/
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/main.py", line 634, in <module>
+    AuctionKeeper(sys.argv[1:]).main()
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/main.py", line 145, in __init__
+    self.mcd = DssDeployment.from_node(web3=self.web3)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/deployment.py", line 323, in from_node
+    return DssDeployment.from_network(web3=web3, network=network)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/deployment.py", line 333, in from_network
+    return DssDeployment.from_json(web3=web3, conf=open(addresses_path, "r").read())
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/deployment.py", line 312, in from_json
+    return DssDeployment(web3, DssDeployment.Config.from_json(web3, conf))
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/deployment.py", line 193, in from_json
+    vat = Vat(web3, Address(conf['MCD_VAT']))
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/dss.py", line 295, in __init__
+    self._contract = self._get_contract(web3, self.abi, address)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/__init__.py", line 157, in _get_contract
+    if not is_contract_at(web3, address):
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/util.py", line 62, in is_contract_at
+    code = web3.eth.getCode(address.address)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/eth.py", line 198, in getCode
+    [account, block_identifier],
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/manager.py", line 149, in request_blocking
+    response = self._make_request(method, params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/manager.py", line 128, in _make_request
+    return request_func(method, params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/signing.py", line 150, in middleware
+    return make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/formatting.py", line 75, in apply_formatters
+    response = make_request(method, params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/gas_price_strategy.py", line 34, in middleware
+    return make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/formatting.py", line 73, in apply_formatters
+    response = make_request(method, formatted_params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/attrdict.py", line 33, in middleware
+    response = make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/formatting.py", line 73, in apply_formatters
+    response = make_request(method, formatted_params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/normalize_errors.py", line 25, in middleware
+    result = make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/formatting.py", line 75, in apply_formatters
+    response = make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/formatting.py", line 73, in apply_formatters
+    response = make_request(method, formatted_params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/exception_retry_request.py", line 104, in middleware
+    return make_request(method, params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/providers/rpc.py", line 83, in make_request
+    **self.get_request_kwargs()
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/_utils/request.py", line 35, in make_post_request
+    response.raise_for_status()
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://blue-silent-rain.kovan.quiknode.pro/a973856d319870d46bb3b1923c145a8d21973d66/
+Traceback (most recent call last):
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 416, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.6/http/client.py", line 1346, in getresponse
+    response.begin()
+  File "/usr/lib/python3.6/http/client.py", line 307, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.6/http/client.py", line 268, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/urllib3/util/retry.py", line 400, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/urllib3/packages/six.py", line 735, in reraise
+    raise value
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 423, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 331, in _raise_timeout
+    self, url, "Read timed out. (read timeout=%s)" % timeout_value
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='laptop', port=8555): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/main.py", line 634, in <module>
+    AuctionKeeper(sys.argv[1:]).main()
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/main.py", line 145, in __init__
+    self.mcd = DssDeployment.from_node(web3=self.web3)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/deployment.py", line 323, in from_node
+    return DssDeployment.from_network(web3=web3, network=network)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/deployment.py", line 333, in from_network
+    return DssDeployment.from_json(web3=web3, conf=open(addresses_path, "r").read())
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/deployment.py", line 312, in from_json
+    return DssDeployment(web3, DssDeployment.Config.from_json(web3, conf))
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/deployment.py", line 193, in from_json
+    vat = Vat(web3, Address(conf['MCD_VAT']))
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/dss.py", line 295, in __init__
+    self._contract = self._get_contract(web3, self.abi, address)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/__init__.py", line 157, in _get_contract
+    if not is_contract_at(web3, address):
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/util.py", line 62, in is_contract_at
+    code = web3.eth.getCode(address.address)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/eth.py", line 198, in getCode
+    [account, block_identifier],
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/manager.py", line 149, in request_blocking
+    response = self._make_request(method, params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/manager.py", line 128, in _make_request
+    return request_func(method, params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/signing.py", line 150, in middleware
+    return make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/formatting.py", line 75, in apply_formatters
+    response = make_request(method, params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/gas_price_strategy.py", line 34, in middleware
+    return make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/formatting.py", line 73, in apply_formatters
+    response = make_request(method, formatted_params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/attrdict.py", line 33, in middleware
+    response = make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/formatting.py", line 73, in apply_formatters
+    response = make_request(method, formatted_params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/normalize_errors.py", line 25, in middleware
+    result = make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/formatting.py", line 75, in apply_formatters
+    response = make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/formatting.py", line 73, in apply_formatters
+    response = make_request(method, formatted_params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/exception_retry_request.py", line 104, in middleware
+    return make_request(method, params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/providers/rpc.py", line 83, in make_request
+    **self.get_request_kwargs()
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/_utils/request.py", line 34, in make_post_request
+    response = session.post(endpoint_uri, data=data, *args, **kwargs)  # type: ignore
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/requests/adapters.py", line 529, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='laptop', port=8555): Read timed out. (read timeout=30)
+Traceback (most recent call last):
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 416, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.6/http/client.py", line 1346, in getresponse
+    response.begin()
+  File "/usr/lib/python3.6/http/client.py", line 307, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.6/http/client.py", line 268, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/urllib3/util/retry.py", line 400, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/urllib3/packages/six.py", line 735, in reraise
+    raise value
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 423, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 331, in _raise_timeout
+    self, url, "Read timed out. (read timeout=%s)" % timeout_value
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='laptop', port=8555): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/main.py", line 634, in <module>
+    AuctionKeeper(sys.argv[1:]).main()
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/main.py", line 145, in __init__
+    self.mcd = DssDeployment.from_node(web3=self.web3)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/deployment.py", line 321, in from_node
+    network = DssDeployment.NETWORKS.get(web3.net.version, "testnet")
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/net.py", line 41, in version
+    return self.web3.manager.request_blocking(RPC.net_version, [])
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/manager.py", line 149, in request_blocking
+    response = self._make_request(method, params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/manager.py", line 128, in _make_request
+    return request_func(method, params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/signing.py", line 150, in middleware
+    return make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/formatting.py", line 75, in apply_formatters
+    response = make_request(method, params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/gas_price_strategy.py", line 34, in middleware
+    return make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/formatting.py", line 75, in apply_formatters
+    response = make_request(method, params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/attrdict.py", line 33, in middleware
+    response = make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/formatting.py", line 75, in apply_formatters
+    response = make_request(method, params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/normalize_errors.py", line 25, in middleware
+    result = make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/formatting.py", line 75, in apply_formatters
+    response = make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/formatting.py", line 75, in apply_formatters
+    response = make_request(method, params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/exception_retry_request.py", line 104, in middleware
+    return make_request(method, params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/providers/rpc.py", line 83, in make_request
+    **self.get_request_kwargs()
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/_utils/request.py", line 34, in make_post_request
+    response = session.post(endpoint_uri, data=data, *args, **kwargs)  # type: ignore
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/requests/adapters.py", line 529, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='laptop', port=8555): Read timed out. (read timeout=30)
+Traceback (most recent call last):
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 421, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 416, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/lib/python3.6/http/client.py", line 1346, in getresponse
+    response.begin()
+  File "/usr/lib/python3.6/http/client.py", line 307, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib/python3.6/http/client.py", line 268, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+socket.timeout: timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 720, in urlopen
+    method, url, error=e, _pool=self, _stacktrace=sys.exc_info()[2]
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/urllib3/util/retry.py", line 400, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/urllib3/packages/six.py", line 735, in reraise
+    raise value
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 672, in urlopen
+    chunked=chunked,
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 423, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/urllib3/connectionpool.py", line 331, in _raise_timeout
+    self, url, "Read timed out. (read timeout=%s)" % timeout_value
+urllib3.exceptions.ReadTimeoutError: HTTPConnectionPool(host='laptop', port=8555): Read timed out. (read timeout=30)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/main.py", line 634, in <module>
+    AuctionKeeper(sys.argv[1:]).main()
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/main.py", line 145, in __init__
+    self.mcd = DssDeployment.from_node(web3=self.web3)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/deployment.py", line 323, in from_node
+    return DssDeployment.from_network(web3=web3, network=network)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/deployment.py", line 333, in from_network
+    return DssDeployment.from_json(web3=web3, conf=open(addresses_path, "r").read())
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/deployment.py", line 312, in from_json
+    return DssDeployment(web3, DssDeployment.Config.from_json(web3, conf))
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/deployment.py", line 227, in from_json
+    adapter=GemJoin(web3, Address(conf[f'MCD_JOIN_{name[0]}'])),
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/dss.py", line 220, in __init__
+    super(GemJoin, self).__init__(web3, address)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/dss.py", line 165, in __init__
+    self._contract = self._get_contract(web3, self.abi, address)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/__init__.py", line 157, in _get_contract
+    if not is_contract_at(web3, address):
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/util.py", line 62, in is_contract_at
+    code = web3.eth.getCode(address.address)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/eth.py", line 198, in getCode
+    [account, block_identifier],
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/manager.py", line 149, in request_blocking
+    response = self._make_request(method, params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/manager.py", line 128, in _make_request
+    return request_func(method, params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/signing.py", line 150, in middleware
+    return make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/formatting.py", line 75, in apply_formatters
+    response = make_request(method, params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/gas_price_strategy.py", line 34, in middleware
+    return make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/formatting.py", line 73, in apply_formatters
+    response = make_request(method, formatted_params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/attrdict.py", line 33, in middleware
+    response = make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/formatting.py", line 73, in apply_formatters
+    response = make_request(method, formatted_params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/normalize_errors.py", line 25, in middleware
+    result = make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/formatting.py", line 75, in apply_formatters
+    response = make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/formatting.py", line 73, in apply_formatters
+    response = make_request(method, formatted_params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/middleware/exception_retry_request.py", line 104, in middleware
+    return make_request(method, params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/providers/rpc.py", line 83, in make_request
+    **self.get_request_kwargs()
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/_utils/request.py", line 34, in make_post_request
+    response = session.post(endpoint_uri, data=data, *args, **kwargs)  # type: ignore
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/requests/sessions.py", line 581, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/requests/adapters.py", line 529, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPConnectionPool(host='laptop', port=8555): Read timed out. (read timeout=30)
+2020-03-30 21:38:00,766 INFO     Keeper connected to RPC connection http://laptop:8555
+2020-03-30 21:38:00,768 INFO     Keeper operating as 0x25dD405E1833F8adE575eB11872747A564EF28a0
+2020-03-30 21:38:01,295 INFO     Executing keeper startup logic
+2020-03-30 21:38:01,788 INFO     Approving Flipper (0xB40139Ea36D35d0C9F6a2e62601B616F1FfbBD1b) to move our 0xbA987bDB501d131f766fEe8180Da5d81b34b69d9 directly
+2020-03-30 21:38:01,983 WARNING  Failed to send transaction <web3._utils.datatypes.Contract object at 0x7f7181e152b0>.hope('0xB40139Ea36D35d0C9F6a2e62601B616F1FfbBD1b') with nonce=0, gas=146256, gas_price=5000000000 ({'code': -32010, 'message': 'Insufficient funds. The account you tried to send transaction from does not have enough funds. Required 731280000000000 and got: 0.'})
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/main.py", line 634, in <module>
+    AuctionKeeper(sys.argv[1:]).main()
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/main.py", line 245, in main
+    lifecycle.every(self.arguments.bid_check_interval, self.check_for_bids)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/lifecycle.py", line 149, in __exit__
+    self.startup_function()
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/main.py", line 248, in startup
+    self.approve()
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/main.py", line 268, in approve
+    self.strategy.approve(gas_price=self.gas_price)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/strategy.py", line 55, in approve
+    self.flipper.approve(self.flipper.vat(), hope_directly(gas_price=gas_price))
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/auctions.py", line 101, in approve
+    spender_address=self.address, spender_name=self.__class__.__name__)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/approval.py", line 92, in approval_function
+    if not hope.transact(**kwargs):
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/__init__.py", line 519, in transact
+    return synchronize([self.transact_async(**kwargs)])[0]
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/util.py", line 50, in synchronize
+    return loop.run_until_complete(asyncio.gather(*futures, loop=loop))
+  File "/usr/lib/python3.6/asyncio/base_events.py", line 484, in run_until_complete
+    return future.result()
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/__init__.py", line 87, in wrapper
+    return await f(*args, **kwds)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/__init__.py", line 627, in transact_async
+    tx_hash = self._func(from_account, gas, gas_price_value, self.nonce)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/__init__.py", line 435, in _func
+    return self._contract_function().transact(transaction_params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/contract.py", line 948, in transact
+    **self.kwargs
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/contract.py", line 1526, in transact_with_contract_function
+    txn_hash = web3.eth.sendTransaction(transact_transaction)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/eth.py", line 386, in sendTransaction
+    [transaction],
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/manager.py", line 153, in request_blocking
+    raise ValueError(response["error"])
+ValueError: {'code': -32010, 'message': 'Insufficient funds. The account you tried to send transaction from does not have enough funds. Required 731280000000000 and got: 0.'}
+2020-03-30 22:32:32,228 INFO     Keeper connected to RPC connection http://laptop:8555
+2020-03-30 22:32:32,228 INFO     Keeper operating as 0x25dD405E1833F8adE575eB11872747A564EF28a0
+2020-03-30 22:32:32,267 INFO     Executing keeper startup logic
+2020-03-30 22:32:32,416 INFO     Approving Flipper (0xB40139Ea36D35d0C9F6a2e62601B616F1FfbBD1b) to move our 0xbA987bDB501d131f766fEe8180Da5d81b34b69d9 directly
+2020-03-30 22:32:32,545 WARNING  Failed to send transaction <web3._utils.datatypes.Contract object at 0x7f21598d52b0>.hope('0xB40139Ea36D35d0C9F6a2e62601B616F1FfbBD1b') with nonce=0, gas=146256, gas_price=5000000000 ({'code': -32010, 'message': 'Insufficient funds. The account you tried to send transaction from does not have enough funds. Required 731280000000000 and got: 0.'})
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/usr/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/main.py", line 634, in <module>
+    AuctionKeeper(sys.argv[1:]).main()
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/main.py", line 245, in main
+    lifecycle.every(self.arguments.bid_check_interval, self.check_for_bids)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/lifecycle.py", line 149, in __exit__
+    self.startup_function()
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/main.py", line 248, in startup
+    self.approve()
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/main.py", line 268, in approve
+    self.strategy.approve(gas_price=self.gas_price)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/strategy.py", line 55, in approve
+    self.flipper.approve(self.flipper.vat(), hope_directly(gas_price=gas_price))
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/auctions.py", line 101, in approve
+    spender_address=self.address, spender_name=self.__class__.__name__)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/approval.py", line 92, in approval_function
+    if not hope.transact(**kwargs):
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/__init__.py", line 519, in transact
+    return synchronize([self.transact_async(**kwargs)])[0]
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/util.py", line 50, in synchronize
+    return loop.run_until_complete(asyncio.gather(*futures, loop=loop))
+  File "/usr/lib/python3.6/asyncio/base_events.py", line 484, in run_until_complete
+    return future.result()
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/__init__.py", line 87, in wrapper
+    return await f(*args, **kwds)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/__init__.py", line 627, in transact_async
+    tx_hash = self._func(from_account, gas, gas_price_value, self.nonce)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/__init__.py", line 435, in _func
+    return self._contract_function().transact(transaction_params)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/contract.py", line 948, in transact
+    **self.kwargs
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/contract.py", line 1526, in transact_with_contract_function
+    txn_hash = web3.eth.sendTransaction(transact_transaction)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/eth.py", line 386, in sendTransaction
+    [transaction],
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/manager.py", line 153, in request_blocking
+    raise ValueError(response["error"])
+ValueError: {'code': -32010, 'message': 'Insufficient funds. The account you tried to send transaction from does not have enough funds. Required 731280000000000 and got: 0.'}
