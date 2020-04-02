@@ -5,5 +5,9 @@ __pycache__
 _virtualenv
 .cache
 .coverage
-
+/auction-keeper/bin
+/auction-keeper/lib
+pyvenv.cfg
+/bin
+/lib
 .DS_Store
