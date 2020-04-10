@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/bin/python3"
+    "python.pythonPath": "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/bin/python3",
+    "python.autoComplete.extraPaths": ["/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker"]
 }
