@@ -11,4 +11,4 @@ pyvenv.cfg
 /bin
 /lib
 .DS_Store
-*.log
+.log

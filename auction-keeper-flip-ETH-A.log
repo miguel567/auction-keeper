@@ -549,3 +549,47 @@ Traceback (most recent call last):
   File "/mnt/c/Users/migue/Documents/docker/auction-keeper/_virtualenv/lib/python3.6/site-packages/web3/manager.py", line 153, in request_blocking
     raise ValueError(response["error"])
 ValueError: {'code': -32010, 'message': 'Insufficient funds. The account you tried to send transaction from does not have enough funds. Required 731280000000000 and got: 0.'}
+Traceback (most recent call last):
+  File "/home/mcabeza/.pyenv/versions/3.6.6/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/mcabeza/.pyenv/versions/3.6.6/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/main.py", line 634, in <module>
+    AuctionKeeper(sys.argv[1:]).main()
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/main.py", line 145, in __init__
+    self.mcd = DssDeployment.from_node(web3=self.web3)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/deployment.py", line 323, in from_node
+    return DssDeployment.from_network(web3=web3, network=network)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/deployment.py", line 333, in from_network
+    return DssDeployment.from_json(web3=web3, conf=open(addresses_path, "r").read())
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/deployment.py", line 312, in from_json
+    return DssDeployment(web3, DssDeployment.Config.from_json(web3, conf))
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/deployment.py", line 192, in from_json
+    pause = DSPause(web3, Address(conf['MCD_PAUSE']))
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/governance.py", line 66, in __init__
+    self._contract = self._get_contract(web3, self.abi, address)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/__init__.py", line 158, in _get_contract
+    raise Exception(f"No contract found at {address}")
+Exception: No contract found at 0x8754E6ecb4fe68DaA5132c2886aB39297a5c7189
+Traceback (most recent call last):
+  File "/home/mcabeza/.pyenv/versions/3.6.6/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/mcabeza/.pyenv/versions/3.6.6/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/main.py", line 634, in <module>
+    AuctionKeeper(sys.argv[1:]).main()
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/auction_keeper/main.py", line 145, in __init__
+    self.mcd = DssDeployment.from_node(web3=self.web3)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/deployment.py", line 323, in from_node
+    return DssDeployment.from_network(web3=web3, network=network)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/deployment.py", line 333, in from_network
+    return DssDeployment.from_json(web3=web3, conf=open(addresses_path, "r").read())
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/deployment.py", line 312, in from_json
+    return DssDeployment(web3, DssDeployment.Config.from_json(web3, conf))
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/deployment.py", line 192, in from_json
+    pause = DSPause(web3, Address(conf['MCD_PAUSE']))
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/governance.py", line 66, in __init__
+    self._contract = self._get_contract(web3, self.abi, address)
+  File "/mnt/c/Users/migue/Documents/docker/auction-keeper/lib/pymaker/pymaker/__init__.py", line 158, in _get_contract
+    raise Exception(f"No contract found at {address}")
+Exception: No contract found at 0x8754E6ecb4fe68DaA5132c2886aB39297a5c7189
