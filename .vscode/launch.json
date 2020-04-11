@@ -10,7 +10,7 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
-            "args": [ "--rpc-host", "laptop", "--rpc-port", "8555", "--rpc-timeout", "30", "--eth-from", "0x25dD405E1833F8adE575eB11872747A564EF28a0", "--eth-key", "'key_file=/home/mcabeza/.ethereum/keystore/UTC--2020-03-29T21-43-37.493768500Z--25dd405e1833f8ade575eb11872747a564ef28a0,pass_file=/home/mcabeza/.ethereum/passphrase/0x25dD405E1833F8adE575eB11872747A564EF28a0.txt'", "--type", "flip", "--ilk", "ETH-A", "--from-block", "14764534", "--vat-dai-target", "1000", "--model", "/mnt/c/Users/migue/Documents/docker/auction-keeper/bidding-models/kovan/model-eth.sh"],
+            "args": [ "--rpc-host", "laptop", "--rpc-port", "8575", "--rpc-timeout", "30", "--eth-from", "0x25dD405E1833F8adE575eB11872747A564EF28a0", "--eth-key", "key_file=/home/mcabeza/.ethereum/keystore/UTC--2020-03-29T21-43-37.493768500Z--25dd405e1833f8ade575eb11872747a564ef28a0,pass_file=/home/mcabeza/.ethereum/passphrase/0x25dD405E1833F8adE575eB11872747A564EF28a0.txt", "--type", "flip", "--ilk", "ETH-A", "--from-block", "14764534", "--vat-dai-target", "1000", "--model", "/mnt/c/Users/migue/Documents/docker/auction-keeper/bidding-models/kovan/model-eth.sh"],
             "env": {
                 "PYTHONPATH": ":${workspaceFolder}/lib/pymaker:${workspaceFolder}/lib/pygasprice-client"
             }

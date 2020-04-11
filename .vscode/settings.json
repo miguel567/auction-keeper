@@ -1,6 +1,9 @@
 {
-    "python.pythonPath": "_virtualenv/bin/python3",
-/*     "terminal.integrated.env.linux": {
-            "PYTHONPATH": "${workspaceFolder}"
-          } */
+  "python.pythonPath": "_virtualenv/bin/python",
+  "terminal.integrated.env.linux": {
+            "PYTHONPATH": ":${workspaceFolder}/lib/pymaker:${workspaceFolder}/lib/pygasprice-client"
+          },
+  "python.envFile": "${workspaceFolder}/.env",
+  "python.linting.pylintEnabled": true,
+  "python.linting.enabled": true
 }
