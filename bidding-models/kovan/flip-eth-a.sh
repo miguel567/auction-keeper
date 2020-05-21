@@ -18,4 +18,5 @@ MODEL=$1
    --from-block 14764534 \
    --vat-dai-target 1000 \
    --model ${dir}/${MODEL} \
+   --debug \
 2> >(tee -a -i auction-keeper-flip-ETH-A.log >&2)
