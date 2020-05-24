@@ -26,7 +26,7 @@
                 "--ilk",
                 "ETH-A",
                 "--from-block",
-                "14764534",
+                "13465601",
                 "--vat-dai-target",
                 "1000",
                 "--model",
