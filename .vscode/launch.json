@@ -129,7 +129,8 @@
                 "--vat-dai-target",
                 "500",
                 "--model",
-                "/mnt/c/Users/migue/Documents/docker/auction-keeper/bidding-models/localtestnet/model-eth.sh"
+                "/mnt/share/s/price.json",
+                "--debug"
             ],
             "env": {
                 "PYTHONPATH": ":${workspaceFolder}/lib/pymaker:${workspaceFolder}/lib/pygasprice-client"
