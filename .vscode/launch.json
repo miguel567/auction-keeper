@@ -64,7 +64,13 @@
                 "20",
                 "--model",
                 "/mnt/share/s/price.json",
-                "--debug"
+                "--debug",
+                "2>",
+                ">(tee",
+                "-a",
+                "-i",
+                "auction-keeper-flip-ETH-A.log",
+                ">&2)"
             ],
             "env": {
                 "PYTHONPATH": ":${workspaceFolder}/lib/pymaker:${workspaceFolder}/lib/pygasprice-client"
